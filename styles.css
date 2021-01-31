@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+#plane {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+#pyramid {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: cubeAnimate 20s infinite normal linear;
+}
+
+@keyframes cubeAnimate {
+    0% {
+        transform: rotate3d(0.5, 1, 0, -720deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, -360deg);
+    }
+}
+
+.face {
+    position: absolute;
+    transform-style: preserve-3d;
+
+    border-style: solid;
+    border-top-width: 200px;
+    border-left-width: 200px;
+    border-right-width: 200px;
+    border-bottom-width: 350px;
+}
+
+.tri {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.base {
+    position: absolute;
+    transform-style: preserve-3d;
+
+    height: 400px;
+    width: 400px;
+    background-color: #01CDFE;
+
+    top: 300px;
+    transform: rotateX(90deg);
+}
+
+.one {
+    transform: translateZ(43px) rotateX(35deg);
+    border-bottom-color:#05FFA1;
+}
+
+.two {
+    transform: translateZ(-43px) rotateX(-35deg);
+    border-bottom-color: #FF71CE;
+}
+
+.three {
+    transform: translateX(43px) rotateY(90deg) rotateX(35deg);
+    border-bottom-color: #FFFB96;
+}
+
+.four {
+    transform: translateX(-43px) rotateY(90deg) rotateX(-35deg);
+    border-bottom-color:#B967FF;
+}

@@ -10,24 +10,18 @@ body {
     height: 100vh;
 }
 
-#plane {
-    position: absolute;
-    top: 15%;
-    left: 40%;
-}
+
 
 #pyramid {
     position: absolute;
+    left: calc(50% - 212px);
     transform-style: preserve-3d;
-    animation: cubeAnimate 20s infinite normal linear;
+    animation: triAnimate 20s infinite normal linear;
 }
 
-@keyframes cubeAnimate {
+@keyframes triAnimate {
     0% {
-        transform: rotate3d(0.5, 1, 0, -720deg);
-    }
-    100% {
-        transform: rotate3d(0, 0, 0, -360deg);
+        transform: rotate3d(0.5, 1, 0, -360deg);
     }
 }
 
@@ -36,46 +30,42 @@ body {
     transform-style: preserve-3d;
 
     border-style: solid;
-    border-top-width: 200px;
-    border-left-width: 200px;
-    border-right-width: 200px;
-    border-bottom-width: 350px;
-}
+    border-top: 600px solid transparent;
+    border-left: 212px solid transparent;
+    border-right: 212px solid transparent;
+    border-bottom: 600px solid transparent;
 
-.tri {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
+        /* transform-origin: ; */
 }
 
 .base {
     position: absolute;
     transform-style: preserve-3d;
 
-    height: 400px;
-    width: 400px;
+    height: 424px;
+    width: 424px;
     background-color: #01CDFE;
 
-    top: 300px;
     transform: rotateX(90deg);
+    top: 600px;
 }
 
 .one {
-    transform: translateZ(43px) rotateX(35deg);
+    transform: rotateX(45deg);
     border-bottom-color:#05FFA1;
 }
 
 .two {
-    transform: translateZ(-43px) rotateX(-35deg);
+    transform: rotateX(-45deg);
     border-bottom-color: #FF71CE;
 }
 
 .three {
-    transform: translateX(43px) rotateY(90deg) rotateX(35deg);
+    transform: rotateY(90deg) rotateX(45deg);
     border-bottom-color: #FFFB96;
 }
 
 .four {
-    transform: translateX(-43px) rotateY(90deg) rotateX(-35deg);
+    transform: rotateY(90deg) rotateX(-45deg);
     border-bottom-color:#B967FF;
 }
